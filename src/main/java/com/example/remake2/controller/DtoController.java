@@ -14,7 +14,7 @@ public class DtoController {
 
     @RequestMapping("/person")
     public String person(Person person) {
-        return person.getId()+", "+person.getName();
+        return person.getId()+", "+person.getName()+", "+person.getPersonStatus().getValue();
     }
 
     @RequestMapping("/kim")

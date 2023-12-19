@@ -10,4 +10,5 @@ import org.springframework.stereotype.Component;
 public class Person {
     String id;
     String name;
+    PersonStatus personStatus;
 }
