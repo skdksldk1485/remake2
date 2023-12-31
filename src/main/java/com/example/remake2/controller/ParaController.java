@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+
 @RestController
 public class ParaController {
 
@@ -13,7 +15,19 @@ public class ParaController {
     public String para(HttpServletRequest request) {
         // http://localhost:8080/para?id=aaa
 
-        String str = request.getParameter("id");
+
+        ArrayList<Integer> arrList = new ArrayList<Integer>();
+        arrList.add(30);
+        arrList.add(20);
+        arrList.add(10);
+
+        arrList.remove(1);
+
+        for (int e : arrList) {
+            System.out.print(e + " ");
+        }
+
+        String str = request.getParameter("id")+arrList.get(0);
 
         return str;
     }
